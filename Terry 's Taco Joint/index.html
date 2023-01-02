@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+   <!-- Navbar Area -->
+   <nav class="menu">
+    <button class="btn" aria-expanded="false" aria-controls="menu-list">
+      <span class="open">☰</span>
+      <span class="close">×</span>
+      Menu
+    </button>
+    <ul id="menu-list">
+      <li>
+        <a href="">Tacos</a>
+      </li>
+      <li>
+        <a href="">Beers</a>
+      </li>
+      <li>
+        <a href="">Wines</a>
+      </li>
+      <li>
+        <a href="">Desserts</a>
+      </li>
+      <li>
+        <a href="">Reservations</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+    
+
+        <!-- Terry's Taco Joint Area -->
+            <div class="container">
+              <div class="main">
+                <header class="banner">
+                  <h1 class="btn">Terry's Taco Joint</h1>
+                  <p class="btn">Pretty Good Tacos!</p>
+                </header>
+                <div class="cta cta1 btn">
+                  <p class="price">$1.99</p>
+                  <p>Tacos</p>
+                </div>
+                <div class="cta cta2 btn">
+                  <p class="price">$3.99</p>
+                  <p>Kombucha</p>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- Cards Area -->
+      <section id="services-container">
+        <div id="services">
+            <div class="box">
+              <span class="icon">🌮</span>
+              
+                <h2 class="h-secondary center">Tacos</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="box">
+              <span class="icon">🍺</span>
+                <h2 class="h-secondary center">Beer</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="box">
+              <span class="icon">🍷</span>
+                <h2 class="h-secondary center">Wine</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. .</p>
+            </div>
+            <div class="box">
+              <span class="icon">🎵</span>
+              <h2 class="h-secondary center">Music</h2>
+              <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+<!-- Featured Taco Area -->
+<div class="feature">
+
+  <img class="img" id="taco" src="featured taco.jpg" alt="">
+  <div class="para">
+    <h1>Featured Taco</h1>
+    <p>Slim Profile, easy to hold and loaded with cheese.</p>
+    <p>This is the one you have been waiting for</p>
+    <button class="btn">Learn More -></button>
+  </div>
+
+</div>
+
+
+
+
+<!-- Instant Grams Area -->
+<section class="pics">
+  <header>
+    <div class="instant">Instant Grams</div>
+</header>
+  <div class="pictures">
+    <img class="gimg" src="https://source.unsplash.com/201x201" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/202x202" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/203x203" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/204x204" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/205x205" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/206x206" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/207x207" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/207x208" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/207x209" alt="" />
+    <img class="gimg" src="https://source.unsplash.com/207x210" alt="" />
+  </div>
+</section>
+</div>
+
+
+
+
+<!-- Javascript -->
+<script>
+
+  const navBtn = document.querySelector('button[aria-expanded');
+  
+  function toggleNav({ target }) {
+    const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+    navBtn.setAttribute('aria-expanded', !expanded);
+  }
+  
+  navBtn.addEventListener('click', toggleNav);
+   
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  
+}
+body{
+    background: linear-gradient(110deg, #f93d66, #6d47d9);
+}
+
+.btn{
+    background: #ffc600;
+    padding: 5px 10px;
+    margin: 9px 43px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.center{
+    background-color: white;
+    text-align: center;
+}
+ 
+
+
+/* NAVBAR AREA */
+
+
+.menu ul {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  padding: 0;
+  margin: 22px 38px;
+  list-style: none;
+}
+
+.menu a {
+  background: var(--yellow);
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 20px;
+    background-color:  #ffc600;
+    font-weight: bold;
+}
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+
+
+@media (max-width: 1000px) {
+  .menu {
+    order: -1;
+    perspective: 800px;
+  }
+  [aria-controls="menu-list"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all .5s;
+  }
+  [aria-expanded="true"] ~ ul {
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+}
+  
+
+
+
+  
+  
+ 
+
+/* Terry's Taco Joint Area */
+
+
+  .main {
+    display: grid;
+    grid-template-areas:
+      "banner banner cta1"
+      "banner banner cta2";
+    grid-gap: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .main {
+      grid-template-areas:
+        "banner banner"
+        "banner banner"
+        "cta1 cta2";
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .main {
+      grid-template-areas:
+        "banner"
+        "banner"
+        "cta1"
+        "cta2";
+    }
+  }
+  
+  .banner {
+    grid-area: banner;
+    min-height: 400px;
+    background: white url(taco.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 40px;
+    display: grid;
+    align-content: center;
+    justify-items: left;
+    margin: 3px 37px;
+  }
+ 
+  .cta {
+    background: #ffc600;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 3px 40px;
+  }
+  
+  .cta p {
+    margin: 0;
+  }
+  .price {
+    font-weight: 200;
+    font-size: 50px;
+  }
+  .cta1 {
+    grid-area: cta1;
+  }
+  .cta2 {
+    grid-area: cta2;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cards Section */
+
+#services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#services .box{ 
+    border: none;
+   
+    background-color: white;
+    padding: 38px;
+    margin: 11px 39px;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 99px;
+   margin: auto;
+   display: block;
+   background-color: white;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+
+} 
+.icon{
+    background-color: white;
+    font-size: 56px;
+    /* margin: 5px 77px; */
+}
+
+
+/* Featured Taco */
+
+.feature{
+    background-color: white;
+    width: 94.8%;
+    height: 325px;
+    margin: auto;
+    /* display: grid; */
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-areas: "img img para";
+ 
+         
+}
+.feature img{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 11px 265px;
+    height: 303px;
+    width: 380px;
+}
+
+
+.para {
+    background-color: white;
+    margin: 55px -201px;
+    padding: 39px 29px;
+    text-align: center;
+}
+.para p{
+    margin: 15px 10px;
+    background-color: white;
+}
+.para h1{
+    font-size: 40px;
+    font-weight: bold;
+    background-color: white;
+}
+   
+
+@media screen and (min-device-width: 929px) and (max-device-width: 1427px){
+    .feature {
+        display: flex;
+        height: 422px;
+    
+    
+        margin: 0px 41px; 
+    }
+}
+
+
+/* Media Queries for FEATURED TACO */
+
+@media screen and (min-device-width: 1170px) and (max-device-width: 1427px){
+.feature {
+    display: flex;
+    height: 353px;
+    width: 94%;
+    /* padding: 0px 20px; */
+    margin: 0px 41px;
+}
+}
+@media (max-width: 1180px){
+.feature .img{
+    height: 169px;
+    width: 277px;
+    margin: 78px 167px;
+}
+}
+@media (max-width: 930px) {
+    .feature {
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 520px;
+        width: 89%;
+        margin: 10px 45px;
+   
+    }
+    .feature .img{
+    
+        height: 133px;
+        width: 187px;
+        margin: 5px auto;
+
+    }
+    #taco{
+        height: 300px;
+        width: 400px;
+    }
+     .para {
+       text-align: center;
+       padding: 0px 62px;
+       margin: 0px;
+    } 
+
+}
+
+@media screen and (min-device-width: 50px) and (max-device-width: 444px){
+    .feature{
+          
+        width: min-content;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #taco{
+        height: 100px;
+        width: 200px;
+    }
+     .para {
+       text-align: center;
+       padding: 0px 62px;
+       margin: 0px;
+    } 
+    .container{
+      width: min-content;
+    }    
+} 
+
+
+/* @media (max-width: 550px){
+    .feature{
+        margin-right: 20px;
+        width: 90%;
+    }
+    .container{
+        width: fit-content;
+    }
+
+
+}
+  
+
+
+/* Instant Grams Section */
+
+
+/* .pics h2{
+
+    text-align: center;
+    margin: 20px;
+    font-size: 40px;
+} */
+.pictures {
+    display: grid;
+    padding: 0px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-items: center;
+    justify-items: center;
+  }
+
+
+  
+.instant {
+  font-size: 2.5rem;
+  display: grid;
+  grid-column: 1/-1;
+  /* grid-template-columns: 1fr auto 1fr; */
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.2rem;
+  align-items: center;
+  margin: 23px;
+  font-weight: bold;
+}
+
+
+.instant::before {
+  display: block;
+  content: '';
+  height: 12px;
+  background: linear-gradient(to right, #d53d8c 2%,rgba(255, 166, 0, 0.905) 25%, #fff700 100%);
+
+  
+}
+
+
+  .instant::after {
+    display: block;
+    content: '';
+    height: 12px;
+    background: linear-gradient(to left, #6d47d9 0%,rgba(255, 166, 0, 0.905) 25%, #fff700 100%);
+  
+    
+  }
+
+
+
+
+/* 
+  #instant::before {
+
+    #f93d9e
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to right, #f93d66 0%,rgba(255, 166, 0, 0.905) 25%, #fff700 100%);
+  } */
+  /* .pics h2::after{
+    display: block;
+    content: '';
+    height: 10px;
+    background: linear-gradient(to right, #f93d66 0%,rgba(255, 166, 0, 0.905) 25%, #fff700 100%); 
+  } */
+  /* .pics h2:after {
+    --direction: right;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
